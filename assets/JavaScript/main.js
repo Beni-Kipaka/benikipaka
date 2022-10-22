@@ -69,8 +69,16 @@ let swiperTestimonial = new Swiper(".testimonial__container", {
 
 
 
-/*=====EMAIL JS=====*/
+/*=====CONTACT POPUP=====*/
+let popup = document.getElementById("popup");
 
+function openPopup(){
+    popup.classList.add("open-popup");
+}
+
+function closePopup(){
+    popup.classList.remove("open-popup");
+}
 
 
 

@@ -619,7 +619,7 @@
                         <div class="contact__data">
                             <span class="contact__data-title">E-mail</span>
                             <span class="contact__data-info">benikipaka01@mail.com</span>
-                            <a href="benikipaka01@gmail.com" class="contact__button">
+                            <a href="email:benikipaka01@gmail.com" class="contact__button">
                                 M'écrire
                             </a>
                         </div>
@@ -627,7 +627,7 @@
                         <div class="contact__data">
                             <span class="contact__data-title">WhatsApp</span>
                             <span class="contact__data-info">+243 824 775 595</span>
-                            <a href="https://api.whatsapp.com/send?phone=243824775595&text=hello, more information!" target="_blank" class="contact__button">
+                            <a href="https://api.whatsapp.com/send?phone=243824775595&text=Bonjour, besoin de plus d'informations !!!" target="_blank" class="contact__button">
                                 M'écrire
                             </a>
                         </div>
@@ -647,7 +647,19 @@
                         <i class="bi bi-send-plus-fill"></i> Ecrit moi ton projet
                     </h3>
 
+                    
+
                     <form action="POST" class="contact__form" id="contact-form">
+
+                        <div class="container__popup">
+                            <div class="popup" id="popup">
+                                <img src="assets/images/tick3-png.png" alt="">
+                                <h2>Merci !</h2>
+                                <p>Votre message a été envoyé avec succès, Merci 1</p>
+                                <button type="button" onclick="closePopup()">OK</button>
+                            </div>
+                        </div>
+
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">Noms</label>
                             <input type="text" name="user_name" required placeholder="Entrer votre noms" class="contact__form-input" id="contact-name">
@@ -663,11 +675,13 @@
                             <textarea name="user_project" placeholder="Entrer votre Projet" id="contact-project" class="contact__form-input"></textarea>
                         </div>
 
-                        <button type="submit" class="contact__button btn-contact">Envoyer</button>
+                        <button type="submit" class="contact__button btn-contact" onclick="openPopup()">Envoyer</button>
                     </form>
                 </div>
             </div>
         </section>
+
+        
 
     </main>
 
