@@ -234,7 +234,7 @@ body.dark-theme{
 .nav__logo{
     font-family: var(--title-font);
     font-weight: bold;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .nav__toggle{
@@ -469,11 +469,13 @@ body.dark-theme{
 .skills__name{
     font-size: var(--small-font-size);
     margin-bottom: .25rem;
+    text-align: center;
 }
 
 .skills__subtitle{
     font-size: var(--tiny-font-size);
     color: var(--text-color-light);
+    text-align: center;
 }
 
 
@@ -839,6 +841,9 @@ body.dark-theme{
     column-gap: .5rem;
     color: var(--title-color);
     font-size: var(--small-font-size);
+    border: 1px solid var(--text-color);
+    padding: 7px 10px;
+    border-radius: 25rem;
 }
 
 .btn-contact{
@@ -1041,13 +1046,203 @@ body.dark-theme{
 
 /* =====BREACKPOINTS===== */
 /* Pour les ecrans petites */
+@media screen and (max-width: 340px) {
+    .container{
+        margin-inline: 1rem;
+    }
+
+    .nav__menu{
+        padding-bottom: 4rem;
+    }
+
+    .nav__list{
+        gap: 1rem 1.25rem;
+    }
+
+    .skills__info{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects__img{
+        width: 200px;
+        justify-self: center;
+    }
+}
+
+
 
 
 /* Pour les ecrans medium */
+@media screen and (min-width: 576px) {
+    .nav,
+    .nav__menu{
+        width: 380px;
+    }
+
+    .nav{
+        margin: 0 auto;
+    }
+
+    .skills__container{
+        justify-content: center;
+    }
+
+    .projects__container,
+    .testimonial__container{
+        width: 400px;
+    }
+
+    .projects__container{
+        overflow: hidden;
+    }
+
+    .projects__container .swiper-button-prev{
+        left: 1rem;
+    }
+
+    .projects__container .swiper-button-next{
+        right: 1rem;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .home__container{
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+
+    .home__data{
+        order: 2;
+    }
+
+    .home__info:nth-child(3){
+        order: 3;
+        text-align: right;
+    }
+
+    .home__info{
+        margin-top: 10rem;
+    }
+
+    .home__info-description{
+        padding-right: 0;
+    }
+
+    .skills__container,
+    .qualification__container,
+    .services__container,
+    .contact__container{
+        grid-template-columns: repeat(2, max-content);
+    }
+
+    .skills__container,
+    .services__container{
+        column-gap: 5rem;
+    }
+
+    .qualification__container{
+        justify-content: center;
+        column-gap: 10rem;
+    }
+
+    .projects__container{
+        width: 500px;
+    }
+
+    .contact__form{
+        width: 300px;
+    }
+
+    .contact__container{
+        justify-content: center;
+        column-gap: 8rem;
+    }
+}
+
+
+
+
 
 
 /* Pour grandes ecrans */
+@media screen and (min-width: 1023px) {
+    .header{
+        top: 0;
+        bottom: initial;
+        background-color: var(--body-color);
+        transform: .4s;
+    }
 
+    .nav{
+        width: initial;
+        height: calc(var(--header-height) + 1.5rem);
+        box-shadow: none;
+        border-radius: 0;
+        column-gap: 3rem;
+        margin-inline: 1.5rem;
+        padding: 0;
+    }
+
+    .nav__link i,
+    .nav__toggle,
+    .nav__close{
+        display: none;
+    }
+
+    .nav__menu{
+        width: initial;
+        margin-left: auto;
+        background-color: var(--body-color);
+        transition: background .4s;
+    }
+
+    .nav__list{
+        display: flex;
+        column-gap: 3rem;
+    }
+
+    .nav__link{
+        font-size: var(--normal-font-size);
+    }
+
+    .dark-theme .nav,
+    .dark-theme .nav__menu{
+        background-color: var(--body-color);
+        box-shadow: none;
+    }
+
+    .change-theme{
+        color: var(--text-color-light);
+    }
+
+    .change-theme:hover{
+        color: var(--title-color);
+    }
+
+    .section{
+        padding-block: 8rem 0;
+    }
+
+    .home__title{
+        font-size: 2rem;
+    }
+
+    .scrollup{
+        right: 3rem;
+    }
+
+    .show-scroll{
+        bottom: 5rem;
+    }
+
+    /* Changement de l;arriere plan du header */
+    .bg-header{
+        box-shadow: 04px 20px hsla(207, 24%, 35%, .1);
+    }
+
+    .dark-theme .bg-header{
+        box-shadow: 0 6px 24px hsla(207, 24%, 8%, .6);
+    }
+}
 
 
 
