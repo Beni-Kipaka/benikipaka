@@ -179,7 +179,7 @@ img{
 .nav__logo{
     font-family: var(--title-font);
     font-weight: bold;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .nav__toggle{
