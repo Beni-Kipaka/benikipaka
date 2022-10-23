@@ -41,7 +41,7 @@
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list grid">
                     <li class="nav__item">
-                        <a href="#home" class="nav__link">
+                        <a href="#home" class="nav__link active-link">
                             <i class="bi bi-house"></i> Accueil
                         </a>
                     </li>
@@ -85,7 +85,7 @@
 
             <div class="nav__buttons">
                 <!-- Theme change button -->
-                <!-- <i class="bi bi-moon change-theme" id="theme-button"></i> -->
+                <i class="bi bi-moon change-theme" id="theme-button"></i>
 
 
                 <!-- Toggle button -->
@@ -209,7 +209,7 @@
 
         <!-- =====SKILLS===== -->
         <section class="skills section" id="skills">
-            <div class="section__title">Skills</div>
+            <div class="section__title">Compétences</div>
             <span class="section__subtitle">My favorite skills</span>
 
             <div class="skills__container container grid section__border">
@@ -481,21 +481,21 @@
                     <div class="swiper-wrapper">
                         <!-- =====PROJETS 1===== -->
                         <div class="projects__content swiper-slide">
-                            <img src="assets/images/mockup-desktop.jpg" alt="" class="projects__img">
+                            <img src="assets/images/site-de-le-caummunaute-letecode.png" alt="" class="projects__img">
 
                             <span class="projects__subtitle">Web</span>
-                            <h1 class="projects__title">Site web e-commerce</h1>
-                            <a href="#" class="projects__button">
+                            <h1 class="projects__title">site letecode community</h1>
+                            <a href="https://beni-kipaka.github.io/letecode-communaute/" class="projects__button">
                                 View demo <i class="bi bi-arrow-right-circle"></i>
                             </a>
                         </div>
 
                         <!-- =====PROJETS 2===== -->
                         <div class="projects__content swiper-slide">
-                            <img src="assets/images/mockup-desktop.jpg" alt="" class="projects__img">
+                            <img src="assets/images/clone-de-kinsta.png" alt="" class="projects__img">
 
                             <span class="projects__subtitle">Web</span>
-                            <h1 class="projects__title">Site web e-commerce</h1>
+                            <h1 class="projects__title">Le clone du site Kinsta</h1>
                             <a href="#" class="projects__button">
                                 View demo <i class="bi bi-arrow-right-circle"></i>
                             </a>
@@ -503,10 +503,10 @@
 
                         <!-- =====PROJETS 3===== -->
                         <div class="projects__content swiper-slide">
-                            <img src="assets/images/mockup-desktop.jpg" alt="" class="projects__img">
+                            <img src="assets/images/clone-de-google.png" alt="" class="projects__img">
 
                             <span class="projects__subtitle">Web</span>
-                            <h1 class="projects__title">Site web e-commerce</h1>
+                            <h1 class="projects__title">Le clone du geant Google</h1>
                             <a href="#" class="projects__button">
                                 View demo <i class="bi bi-arrow-right-circle"></i>
                             </a>
@@ -514,10 +514,10 @@
 
                         <!-- =====PROJETS 3===== -->
                         <div class="projects__content swiper-slide">
-                            <img src="assets/images/mockup-desktop.jpg" alt="" class="projects__img">
+                            <img src="assets/images/site-web-de-fodev.png" alt="" class="projects__img">
 
                             <span class="projects__subtitle">Web</span>
-                            <h1 class="projects__title">Site web e-commerce</h1>
+                            <h1 class="projects__title">Site web de fodev-rdc</h1>
                             <a href="#" class="projects__button">
                                 View demo <i class="bi bi-arrow-right-circle"></i>
                             </a>
@@ -605,7 +605,7 @@
 
 
         <!-- =====CONTACT===== -->
-        <section class="contact section" id="projects">
+        <section class="contact section" id="contact">
             <h2 class="section__title">Me Contacter</h2>
             <span class="subtitle">Entrer en contact</span>
 
@@ -666,24 +666,73 @@
                             <textarea name="user_project" placeholder="Entrer votre Projet" id="contact-project" class="contact__form-input"></textarea>
                         </div>
 
-                        <button type="submit" class="contact__button btn-contact" onclick="openPopup()">Envoyer</button>
+                        <p class="contact__message" id="contact-message"></p>
+
+                        <button type="submit" class="contact__button btn-contact">
+                            Envoyer
+                        </button>
                     </form>
                 </div>
             </div>
         </section>
-
-        
 
     </main>
 
 
     <!-- =====FOOTER===== -->
     <footer class="footer">
+        <div class="footer__container container">
+            <h1 class="footer__title">Beni Kipaka</h1>
+            <p>Developpeur Full Stack</p>
 
+            <ul class="footer__list">
+                <li>
+                    <a href="#home" class="footer__link">Accueil</a>
+                </li>
+
+                <li>
+                    <a href="#skills" class="footer__link">Compétences</a>
+                </li>
+
+                <li>
+                    <a href="#projects" class="footer__link">Projets</a>
+                </li>
+            </ul>
+
+            <ul class="footer__social">
+                <a href="" target="_blank" class="footer__social-link">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="" target="_blank" class="footer__social-link">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a href="" target="_blank" class="footer__social-link">
+                    <i class="bi bi-instagram"></i>
+                </a>
+
+                <a href="" target="_blank" class="footer__social-link">
+                    <i class="bi bi-twitter"></i>
+                </a>
+
+                <a href="" target="_blank" class="footer__social-link">
+                    <i class="bi bi-github"></i>
+                </a>
+            </ul>
+
+            <span class="footer__copy">
+                &copy; Copyright 2022 Beni Kipaka. All right reserved. 
+            </span>
+        </div>
     </footer>
 
 
+
+
     <!-- =====SCROLL UP===== -->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="bi bi-arrow-up-circle-fill"></i>
+    </a>
+
 
 
 
@@ -697,6 +746,7 @@
 
 
     <!-- =====EMAIL JS===== -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
 
     <!-- =====MAIN JS===== -->

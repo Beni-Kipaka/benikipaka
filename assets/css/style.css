@@ -74,6 +74,7 @@ body{
     font-size: var(--normal-font-size);
     background-color: var(--body-color);
     color: var(--text-color);
+    transition: background .4s; /* Pour l'animation du mode sombre */
 }
 
 h1, h2, h3{
@@ -99,14 +100,67 @@ img{
 
 
 /* =====THEME===== */
+.nav__buttons{
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+}
+
+.change-theme{
+    font-size: 1.25rem;
+    color: var(--title-color);
+    cursor: pointer;
+    transition: color .3s;
+}
+
 
 
 /* =====VARIABLES DARK THEME */
+body.dark-theme{
+    --title-color: hsl(207, 4%, 95%);
+    --text-color: hsl(207, 4%, 65%);
+    --body-color: hsl(207, 4%, 10%);
+    --container-color: hsl(207, 4%, 12%);
+}
 
 
+/* La couleur change dans quelaues parties du site en mode claire */
+.dark-theme .nav,
+.dark-theme .nav__menu,
+.dark-theme .scrollup{
+    background-color: var(--container-color);
+    box-shadow: 0 4px 20px hsla(207, 24%, 8%, .4);
+}
+
+.dark-theme .home__shape-wawes,
+.dark-theme .home__shape-circle,
+.dark-theme .qualification__img,
+.dark-theme .testimonial__img{
+    filter: invert(1);
+}
+
+.dark-theme .home__social-link{
+    color: var(--title-color);
+}
+
+.dark-theme .section__border{
+    border-bottom: 1px solid hsl(207, 4%, 32%);
+}
+
+.dark-theme::-webkit-scrollbar{
+    background-color: hsl(207, 4%, 15%);
+}
+
+.dark-theme::-webkit-scrollbar-thumb{
+    background-color: hsl(207, 4%, 25%);
+}
+
+.dark-theme::-webkit-scrollbar-thumb:hover{
+    background-color: hsl(207, 4%, 35%);
+}
 
 
-/* =====RESABLE CSS CLASSES===== */
+/* =====REUSABLE CSS CLASSES===== */
 .container{
     max-width: 1024px;
     margin-inline: 1.5rem;
@@ -168,6 +222,7 @@ img{
     box-shadow: 0 4px 20px hsla(207, 24%, 35%, .1);
     padding-inline: 1.5rem;
     border-radius: 2rem;
+    transition: background .4s; /* Pour l'animation du mode sombre */
 }
 
 .nav__logo,
@@ -239,13 +294,15 @@ img{
 
 
 
-/* SHOW MENU */
+/* Show menu */
 .show-menu{
     bottom: 2rem;
 }
 
-/* ACTIVE MENU */
-
+/* Active link */
+.active-link{
+    color: var(--title-color);
+}
 
 
 
@@ -275,6 +332,7 @@ img{
     justify-self: center;
     border-radius: 6.25rem;
     place-items: center;
+    transition: background .4s; /* Pour l'animation du mode sombre */
 }
 
 .home__perfil{
@@ -401,6 +459,7 @@ img{
     border-radius: 3rem;
     place-items: center;
     margin-bottom: 1rem;
+    transition: background .4s; /* Pour l'animation du mode sombre */
 }
 
 .skills__blob img{
@@ -520,6 +579,7 @@ img{
     text-align: center;
     padding: 3.5rem 1rem;
     border-radius: 7.25rem;
+    transition: background .4s; /* Pour l'animation du mode sombre */
 }
 
 .services__card i{
@@ -831,6 +891,7 @@ img{
     font-size: var(--smaller-font-size);
     font-weight: var(--font-medium);
     padding: .35rem;
+    transition: background .4s; /* Pour l'animation du mode sombre */
 }
 
 .contact__form-area{
@@ -851,34 +912,141 @@ img{
     margin-top: .75rem;
 }
 
+.contact__message{
+    font-size: var(--small-font-size);
+    position: absolute;
+    bottom: 2.8rem;
+    left: 1.5rem;
+}
 
 
 
 
 /* Statut color */
+.color-red{
+    color: hsl(4, 71%, 50%);
+}
 
+.color-blue{
+    color: hsl(207, 56%, 45%);
+}
 
 
 
 
 /* FOOTER */
+.footer__container{
+    padding: 3rem 0 7rem;
+    text-align: center;
+}
+
+.footer__title{
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-semi-bold);
+    margin-bottom: 1rem;
+}
+
+.footer__list,
+.footer__social{
+    display: flex;
+    justify-content: center;
+}
+
+.footer__list{
+    margin: 2.5rem 0;
+    column-gap: 2.5rem;
+}
+
+.footer_link{
+    color: var(--title-color);
+}
+
+.footer_link:hover{
+    text-decoration: underline;
+}
+
+.footer__social{
+    column-gap: 1.25rem;
+}
+
+.footer__social-link{
+    font-size: 1.25rem;
+    color: var(--title-color);
+    transition: transform .3s;
+}
+
+.footer__social-link:hover{
+    transform: translateY(-.15rem);
+}
+
+.footer__copy{
+    display: block;
+    margin-top: 4.5rem;
+    font-size: var(--smaller-font-size);
+    color: var(--text-color-light);
+}
+
 
 
 
 
 
 /* SCROLL BAR */
+::-webkit-scrollbar{
+    width: .6rem;
+    border-radius: .5rem;
+    background-color: hsl(207, 4%, 75%);
+}
 
+::-webkit-scrollbar-thumb{
+    background-color: hsl(207, 4%, 65%);
+    border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: hsl(207, 4%, 55%);
+}
 
 
 
 
 /* SCROLL UP */
+.scrollup{
+    position: fixed;
+    right: 1rem;
+    bottom: -30%;
+    background-color: var(--body-color);
+    box-shadow: 0 4px 12px hsl(207, 24%, 35%, .15);
+    display: inline-flex;
+    padding: .35rem;
+    color: var(--title-color);
+    border-radius: .25rem;
+    font-size: 1.1rem;
+    z-index: var(--z-tooltip);
+    transition: bottom .3s, transform .3s;
+}
+
+.scrollup:hover{
+    transform: translateY(-.25rem);
+}
+
+
+/* Show Scroll Up */
+.show-scroll{
+    bottom: 7.5rem;
+}
 
 
 
 
+/* =====BREACKPOINTS===== */
+/* Pour les ecrans petites */
 
+
+/* Pour les ecrans medium */
+
+
+/* Pour grandes ecrans */
 
 
 
