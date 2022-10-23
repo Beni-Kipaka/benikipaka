@@ -1,5 +1,5 @@
 /* =====GOOGLE FONTS */
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 /* =====VARIABLES CSS===== */
 :root {
@@ -14,7 +14,12 @@
 --body-color: hsl(207, 4%, 99%);
 --container-color: hsl(207, 4%, 95%);
 
---gradient-color: linear-gradient(180deg, hsla(207, 48%, 72, 0), hsla(207, 65%, 65%, 1));
+/* Changement de theme */
+
+/* Pour le gradient Blue: 207 - Purple: 250 - Pink: 356 - Teal: 174 */
+--gradient-color: linear-gradient(180deg, 
+                    hsla(207, 48%, 72, 0), 
+                    hsla(207, 65%, 65%, 1));
 
 /* =====FONT ET TYPOGRAPHIE */
 --body-font: 'Poppins', sans-serif;
@@ -1127,6 +1132,23 @@ body.dark-theme{
         padding-right: 0;
     }
 
+    .home__blob{
+        width: 300px;
+        height: 450px;
+        border-radius: 12.5rem;
+    }
+
+
+    .home__perfil{
+        width: 250px;
+        height: 370px;
+        border-radius: 10.9rem;
+    }
+
+    .home__perfil img{
+        width: 250px;
+    }
+
     .skills__container,
     .qualification__container,
     .services__container,
@@ -1226,6 +1248,23 @@ body.dark-theme{
         font-size: 2rem;
     }
 
+    .home__blob{
+        width: 300px;
+        height: 450px;
+        border-radius: 12.5rem;
+    }
+
+
+    .home__perfil{
+        width: 250px;
+        height: 370px;
+        border-radius: 10.9rem;
+    }
+
+    .home__perfil img{
+        width: 250px;
+    }
+
     .scrollup{
         right: 3rem;
     }
@@ -1244,6 +1283,243 @@ body.dark-theme{
     }
 }
 
+
+@media screen and (min-width: 1048px) {
+    .container{
+        margin-inline: auto;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .section__border{
+        padding-bottom: 6rem;
+    }
+
+    .section__subtitle{
+        margin-bottom: 5rem;
+    }
+
+    .home__title{
+        font-size: 30px;
+    }
+
+    .home__blob{
+        width: 400px;
+        height: 580px;
+        border-radius: 12.5rem;
+    }
+
+    .home__perfil{
+        width: 340px;
+        height: 500px;
+        border-radius: 10.9rem;
+    }
+
+    .home__perfil img{
+        width: 350px;
+    }
+
+    .home__shape-wawes{
+        width: 100px;
+        left: -4rem;
+        top: 10rem;
+    }
+
+    .home__shape-circle{
+        width: 250px;
+        bottom: -1rem;
+        right: -5rem;
+    }
+
+    .home__data{
+        row-gap: 2.5rem;
+    }
+
+    .home__social{
+        column-gap: 2rem;
+    }
+
+    .home__social-link{
+        font-size: 1.5rem;
+    }
+
+    .home__info{
+        grid-template-rows: repeat(3, 130px );
+        row-gap: 4rem;
+        margin-top: 16rem;
+    }
+
+    .skills__container{
+        column-gap: 10rem;
+    }
+
+    .skills__title{
+        margin-bottom: 3rem;
+    }
+
+    .skills__title i{
+        font-size: 1.25rem;
+    }
+
+    .skills__name{
+        font-size: var(--normal-font-size)
+    }
+
+    .skills__info{
+        gap: 3rem;
+    }
+
+    .qualification__container{
+        column-gap: 14rem;
+    }
+
+    .qualification__title{
+        margin-bottom: 3rem;
+    }
+
+    .qualification__title i{
+        font-size: 1.25rem;
+    }
+
+    .qualification__name{
+        font-size: var(--h3-font-size);
+    }
+
+    .qualification__img{
+        width: 300px;
+        left: -6rem;
+        bottom: 5rem;
+    }
+
+    .services__container{
+        grid-template-columns: repeat(4, max-content);
+    }
+
+    .services__card{
+        width: 250px;
+        height: 380px;
+        border-radius: 7.6rem;
+        padding: 3.5rem 1.5rem;
+    }
+
+    .services__card i{
+        font-size: 2.5rem;
+    }
+
+    .services__title{
+        font-size: 1.2rem;
+    }
+
+    .services__description{
+        font-size: 15px;
+    }
+
+    .services__border{
+        width: 270px;
+        height: 400px;
+        border-radius: 8.25rem;
+    }
+
+    .projects__container{
+        width: 900px;
+    }
+
+    .projects__container .swiper-button-prev,
+    .projects__container .swiper-button-next{
+        font-size: 3rem;
+    }
+
+    .projects__container .swiper-button-prev{
+        left: 1rem;
+    }
+
+    .projects__container .swiper-button-next{
+        right: 1rem;
+    }
+
+    .projects__container .swiper-slide{
+        margin-bottom: 6.5rem;
+    }
+
+    .projects__img{
+        width: 320px;
+        margin-bottom: 5rem;
+    }
+
+    .testimonial__container{
+        width: 566px;
+    }
+
+    .testimonial__container .swiper-button-prev,
+    .testimonial__container .swiper-button-next{
+        font-size: 2.5rem;
+    }
+
+    .testimonial__container .swiper-button-prev{
+        left: calc(50% - 5rem);
+    }
+
+    .testimonial__container .swiper-button-next{
+        right: calc(50% - 5rem);
+    }
+
+    .testimonial__container .swiper-slide{
+        margin-bottom: 6rem;
+    }
+
+    .testimonial__description{
+        font-size: var(--h2-font-size);
+        margin-bottom: 2rem;
+    }
+
+    .testimonial__img{
+        width: 200px;
+        top: 13rem;
+        right: 4rem;
+    }
+
+    .contact__title{
+        margin-bottom: 3rem;
+    }
+
+    .section__title i{
+        font-size: 1.25rem;
+    }
+
+    .contact__info{
+        row-gap: 1rem;
+    }
+
+    .contact__data-info{
+        font-size: var(--normal-font-size);
+    }
+
+    .contact__form{
+        row-gap: 2.5rem;
+    }
+
+    .footer__container{
+        padding: 4rem 0 3rem;
+    }
+
+    .footer__list{
+        column-gap: 3rem;
+        margin: 3rem 0;
+    }
+
+    .footer__social{
+        column-gap: 2rem;
+    }
+
+    .footer__social-link{
+        font-size: 1.5rem;
+    }
+
+    .footer__copy{
+        margin-top: 5rem;
+        font-size: 1.2rem;
+    }
+}
 
 
 
