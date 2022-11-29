@@ -854,7 +854,7 @@ body.dark-theme{
     background-color: rgb(40, 243, 26);
     outline: none;
     border: none;
-    color: var(--title-color);
+    color: var(--text-color);
     font-size: 12px;
     height: 40px;
     border-radius: 5rem;
@@ -862,7 +862,7 @@ body.dark-theme{
 
 .contact__button{
     color: var(--title-color);
-    border: 1px solid black;
+    border: 1px solid var(--text-color);
     border-radius: 5rem;
     width: max-content;
     padding: 7px 15px;
