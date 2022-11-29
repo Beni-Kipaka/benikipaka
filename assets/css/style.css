@@ -854,14 +854,14 @@ body.dark-theme{
     background-color: rgb(40, 243, 26);
     outline: none;
     border: none;
-    color: black;
+    color: var(--title-color);
     font-size: 12px;
     height: 40px;
     border-radius: 5rem;
 }
 
 .contact__button{
-    color: black;
+    color: var(--title-color);
     border: 1px solid black;
     border-radius: 5rem;
     width: max-content;
