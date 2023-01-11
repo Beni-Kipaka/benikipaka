@@ -329,7 +329,7 @@ body.dark-theme{
 
 .home__title{
     text-align: center;
-    font-size: var(--biggest-font-size);
+    font-size: 1.2rem;
     letter-spacing: .3px;
     margin-bottom: .5rem;
 }
