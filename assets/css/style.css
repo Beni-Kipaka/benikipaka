@@ -851,7 +851,7 @@ body.dark-theme{
     align-items: center;
     column-gap: .5rem;
     padding: 8px 15px;
-    background-color: rgb(40, 243, 26);
+    background-color: rgb(115, 235, 107);
     outline: none;
     border: none;
     color: var(--text-color);
@@ -869,7 +869,7 @@ body.dark-theme{
 }
 
 .btn-contact:hover{
-    background-color: blue;
+    background-color: rgb(119, 119, 240);
 }
 
 .contact__form{
